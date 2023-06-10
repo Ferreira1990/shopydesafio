@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <img class="customimg" src="./assets/img/product.png" alt="" />
+        <p>HP LPX-9087</p>
+        <input
+          id="inputCantidad"
+          type="number"
+          placeholder="Indique la cantidad..."
+        />
+        <input
+          id="inputColor"
+          type="text"
+          placeholder="Que color desea llevar?..."
+        />
+        <p class="pcustom">Precio $<span id="precio">90000</span></p>
+        <button
+          onclick="
+            cantidad = document.querySelector('#inputCantidad').value
+            precio = document.querySelector('#precio'). textContent
+            total = Number (cantidad) * Number (precio)    
+            color = document.getElementById('inputColor'). value
+            document.querySelector('.precioTotal'). innerHTML = total
+            document.querySelector('.cantidadFinal'). innerHTML = cantidad
+            document.querySelector('.colorFinal').style.backgroundColor = color
+            "
+        >
+          Calcular total
+        </button>
+      </main>
+      <section>
+        <h3>Total:$<span class="precioTotal">0</span></h3>
+        <h3>Cantidad:<span class="cantidadFinal">0</span></h3>
+        <h3>Color: <span class="colorFinal"></span></h3>
+      </section>
+    </div>
+
+  </body>
+</html>
